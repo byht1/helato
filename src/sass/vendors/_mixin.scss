@@ -1,0 +1,18 @@
+@mixin textMainMobail($font-family: 'DM Sans', $a: 700, $b: 14px, $c: 18px) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $a;
+  font-size: $b;
+  line-height: $c / $b;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition() {
+  transition: transform 250ms linear, color 250ms linear,
+    background-color 250ms linear;
+}

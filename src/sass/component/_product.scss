@@ -1,0 +1,203 @@
+.section-products {
+  background-color: $wihte;
+  color: $wihte;
+}
+
+.products {
+  padding-top: 121px;
+  padding-bottom: 98px;
+  text-align: center;
+}
+
+.products-list-box {
+  margin-top: -139px;
+  padding: 0 40px;
+  padding-top: 161px;
+  width: 280px;
+  height: 485px;
+  border-radius: 24px;
+  background-color: #ffb8ca;
+}
+
+.products__text {
+  @include text('Titan One', 400, 18px, 21px);
+  text-transform: uppercase;
+  color: #ffa5ba;
+}
+
+.products-header {
+  margin-top: 15px;
+  @include text('Titan One', 400, 34px, 39px);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $accentText;
+}
+
+.products-list {
+  margin-top: 31px;
+}
+
+.products-list__element {
+  margin: 0 auto;
+  &:nth-child(2) .products-list-box {
+    background-color: #f0d1a5;
+  }
+  &:last-child .products-list-box {
+    background-color: #c2e297;
+  }
+  &:not(:first-child) {
+    margin-top: 17px;
+  }
+}
+
+.products-list__photo {
+  margin: 0 auto;
+
+  width: 249px;
+  height: 252px;
+}
+
+.products-list__header,
+.products-list__decoration {
+  @include text('Titan One', 400, 20px, 23px);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.products-list__decoration {
+  display: block;
+  margin-top: 30px;
+}
+
+.products-list__text {
+  margin-top: 30px;
+  @include text('DM Sans', 700, 14px, 21px);
+}
+
+.button__arrow--size {
+  margin: 0 auto;
+  margin-top: 30px;
+  @include flexCenter;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  color: $accentText;
+  background-color: $wihte;
+
+  transform: scale(1);
+
+  @include transition();
+  svg {
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $wihte;
+    background-color: $accentText;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .products-list__element {
+    max-width: 280px;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .products-list-box {
+    margin-top: -122px;
+    padding: 0 11px;
+    padding-top: 152px;
+    width: 220px;
+    height: 485px;
+  }
+
+  .products__text {
+    @include text('Titan One', 400, 26px, 30px);
+  }
+
+  .products-header {
+    @include text('Titan One', 400, 48px, 55px);
+  }
+
+  .products {
+    padding-bottom: 112px;
+  }
+
+  .products-list {
+    @include flexCenter;
+  }
+
+  .products-list__photo {
+    width: 220px;
+    height: 233px;
+  }
+
+  .products-list__text {
+    @include text('DM Sans', 700, 14px, 25px);
+  }
+
+  .products-list .products-list__element {
+    margin-top: 0;
+  }
+
+  .button__arrow--size {
+    margin-top: 40px;
+  }
+}
+
+@media screen and(min-width: 1280px) {
+  .products {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+
+  .products-list-box {
+    margin-top: -125px;
+    padding: 0 44px;
+    padding-top: 163px;
+    width: 329px;
+    height: 525px;
+  }
+
+  .products__text {
+    @include text('Titan One', 400, 30px, 34px);
+  }
+
+  .products-header {
+    @include text('Titan One', 400, 58px, 66px);
+  }
+
+  .products-list__photo {
+    width: 335px;
+    height: 335px;
+  }
+
+  .products-list__header {
+    @include text('Titan One', 700, 30px, 34px);
+  }
+
+  .products-list__text {
+    @include text('DM Sans', 700, 14px, 25px);
+    letter-spacing: 0.04em;
+  }
+
+  .products-list__decoration {
+    margin: 32px 0;
+  }
+
+  .products-list {
+    margin-top: 49px;
+    justify-content: space-between;
+  }
+
+  .button__arrow--size {
+    margin-top: 62px;
+  }
+}

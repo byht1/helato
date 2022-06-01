@@ -57,6 +57,8 @@
 }
 
 .nav-list__link {
+  position: relative;
+  z-index: 5;
   @include text('DM Sans', 700, 14px, 18px);
   color: #fff;
 

@@ -22,7 +22,8 @@
 }
 
 .header__menu {
-  //   position: relative;
+    position: relative;
+    z-index: 5;
   margin-left: auto;
   &-end {
     position: absolute;

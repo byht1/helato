@@ -93,9 +93,9 @@ button:focus {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1080){
   .conteiner {
-    min-width: 700px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1081px) {

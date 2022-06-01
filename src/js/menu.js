@@ -10,8 +10,8 @@ refs.menu.addEventListener('click', () => {
   refs.burger.classList.toggle('is-open');
   refs.end.classList.toggle('is-open');
   refs.nav.classList.toggle('nav--show');
-  refs.nav.classList.toggle('visually-hidden-two');
-  setTimeout(() => {
-    refs.body.classList.toggle('hidden');
-  }, 250);
+  refs.body.classList.toggle('hidden');
+  // setTimeout(() => {
+  //   refs.body.classList.toggle('hidden');
+  // }, 250);
 });

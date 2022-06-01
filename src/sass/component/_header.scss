@@ -1,7 +1,10 @@
+.header {
+  background-color: $fon;
+}
+
 .header-box {
-  padding: 6px 0;
+  padding-top: 6px;
   display: flex;
-  //   justify-content: space-between;
   align-items: center;
 }
 .logo {
@@ -74,9 +77,10 @@
   }
 
   .nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    bottom: 0;
     z-index: 1000;
     width: 250px;
     height: 100%;
@@ -91,22 +95,11 @@
       opacity: 1;
     }
   }
-
-  .visually-hidden-two {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
 }
 
 @media screen and(min-width: 768px) {
   .header-box {
-    padding: 38px 0;
+    padding-top: 37px;
   }
 
   .header__menu {
@@ -137,16 +130,16 @@
 }
 
 @media screen and(min-width: 1280px) {
+  .logo {
+    margin-left: -70px;
+  }
+
   .header__menu {
     display: none;
   }
 
   .header__button-two {
     display: none;
-  }
-
-  .header-box {
-    padding: 38px 0;
   }
 
   .nav {

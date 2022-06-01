@@ -22,8 +22,8 @@
 }
 
 .header__menu {
-    position: relative;
-    z-index: 5;
+  position: relative;
+  z-index: 5;
   margin-left: auto;
   &-end {
     position: absolute;
@@ -133,10 +133,6 @@
 }
 
 @media screen and(min-width: 1280px) {
-  .logo {
-    margin-left: -70px;
-  }
-
   .header__menu {
     display: none;
   }

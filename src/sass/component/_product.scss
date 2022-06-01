@@ -38,11 +38,14 @@
 }
 
 .products-list__element {
+  position: relative;
   margin: 0 auto;
-  &:nth-child(2) .products-list-box {
+  &:nth-child(2) .products-list-box,
+  &:nth-child(2) .back-box {
     background-color: #f0d1a5;
   }
-  &:last-child .products-list-box {
+  &:last-child .products-list-box,
+  &:last-child .back-box {
     background-color: #c2e297;
   }
   &:not(:first-child) {
@@ -103,6 +106,47 @@
   }
 }
 
+.products-list__element {
+  width: 280px;
+  height: 598px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 1s;
+  backface-visibility: hidden;
+}
+
+.back {
+  padding-top: 210px;
+
+  transform: rotateY(180deg);
+
+  &-box {
+    background-color: #ffb8ca;
+    padding: 44px;
+    border-radius: 20px;
+  }
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(360deg);
+}
+
 @media screen and(max-width: 767px) {
   .products-list__element {
     max-width: 280px;
@@ -110,6 +154,11 @@
 }
 
 @media screen and(min-width: 768px) {
+  .products-list__element {
+    width: 220px;
+    height: 589px;
+  }
+
   .products-list-box {
     margin-top: -122px;
     padding: 0 11px;
@@ -152,7 +201,11 @@
   }
 }
 
-@media screen and(min-width: 1280px) {
+@media screen and(min-width: 1000px) {
+  .products-list__element {
+    width: 335px;
+    height: 735px;
+  }
   .products {
     padding-top: 127px;
     padding-bottom: 119px;

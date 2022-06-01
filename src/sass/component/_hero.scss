@@ -17,11 +17,12 @@
 
 .hero-box {
   // dddd
-  position: relative;
+  
   @media screen and(min-width: 768px) and (max-width: 999px) {
     position: relative;
     display: flex;
   }
+  position: relative;
 }
 
 .hero-text-cont {

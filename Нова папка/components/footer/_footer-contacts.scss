@@ -1,0 +1,119 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--footer-bcg-color); 
+}
+
+.link:hover,
+.link:focus{
+    color: var(--focus-color);
+}
+.footer-logo {
+    display: block;
+    font-style: normal;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--footer-logo-color);
+    text-decoration: none;
+    
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
+    
+    .footer-logo-web {
+    color: var(--nav-logo-web-color);
+    }
+}
+.footer-list{
+    @media screen and (max-width: 1199px) {
+    display: block;
+    margin-bottom: 60px;   
+    }
+    
+}
+.address {
+    display: block;
+    @media screen and (min-width: 768px)and (max-width: 1199px) {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           text-align: center;
+        }
+}
+
+.address-geography {
+    font-style: normal;
+    line-height: 1.71;
+    color: var(--hero-text-color);
+    text-decoration: none;
+    transition: color var(--main-transition);
+}
+.small-hide{
+    @media screen and (max-width: 1199px) { 
+        display: none;
+    }
+}
+.desk-hide{
+    @media screen and (min-width: 1200px) { 
+        display: none;
+    }
+}
+.footer-contact {
+    display: block;
+    font-style: normal;
+    line-height: 1.71;
+    color: var(--footer-contact-color);
+    text-decoration: none;
+    transition: color var(--main-transition);
+}
+
+.footer-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer-section { 
+    @media screen and (max-width: 767px) {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+    &.mobile {
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    
+    &.tablet {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+   
+}
+.footer-tablet{
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+display: flex;
+justify-content: space-around;
+align-items: baseline;
+    } 
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer-navigation {
+    display: block;
+}

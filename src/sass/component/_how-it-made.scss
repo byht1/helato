@@ -1,0 +1,303 @@
+.how-it-made {
+    background-color: #FFF5F6;
+    padding-top: 125px;
+    padding-bottom: 139px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 767px) {
+        padding-top: 125px;
+        padding-bottom: 97px;
+        background-image: url(../images/how-its-made/cow-fon-mobail-320.png);
+        background-position: 0 766px;
+            @media (min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/how-its-made/cow-fon-mobail-640.png);
+                    }
+                }
+                        @media screen and(min-width: 768px) and (max-width: 999px) {
+                            padding-top: 130px;
+                            padding-bottom: 140px;
+                        }
+                @media screen and (min-width: 1000px) {
+                    background-image: url(../images/how-its-made/cow-fon-desctop-1280.png);
+                    max-width: 100vw;
+                    background-position: 0 308px;
+                    @media (min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/how-its-made/cow-fon-desctop-2560.png);
+                    }
+                }
+}
+
+.back-cont{
+    @media screen and(min-width: 768px) {
+        display: flex;    
+        }
+
+}
+
+
+
+.prepare-list {
+display: block;
+text-align: center;
+font-family: 'Titan One';
+font-style: normal;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+
+.prepare-title-first {
+
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 15px;
+
+    color: var(--accent-salmon-color);
+
+    @media screen and(min-width: 768px) and (max-width: 999px) {
+        font-size: 26px;
+        line-height: 1.15;
+        }
+    
+        @media screen and(min-width: 320px) and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 1.17;
+        }
+}
+
+.prepare-title-second {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+
+    color: var(--focus-pinc-color);
+
+    @media screen and(min-width: 768px) and (max-width: 999px) {
+        font-size: 48px;
+        line-height: 1.15;
+        }
+    
+        @media screen and(min-width: 320px) and (max-width: 767px) {
+        font-size: 34px;
+        line-height: 1.15;
+        }
+}
+
+.prepare__img {
+    display: block;
+    margin-top: 55px;
+    img{
+        width: 516px;
+    @media screen and(min-width: 768px) and (max-width: 999px) {
+        width: 340px;
+        }
+    
+        @media screen and(min-width: 320px) and (max-width: 767px) {
+        width: 100%;
+        }
+    }
+ @media screen and(min-width: 768px) and (max-width: 999px) {
+    margin-top: 50px;
+ }
+
+ @media screen and(min-width: 320px) and (max-width: 767px) {
+    margin-top: 26px;
+ }
+}
+
+.prepare-text-list {
+    margin-left: 74px;
+    margin-top: 106px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    @media screen and(min-width: 768px) and (max-width: 999px) {
+        margin-left: 17px;
+        margin-top: 100px;
+        }
+    
+        @media screen and(min-width: 320px) and (max-width: 767px) {
+        margin-top: 46px;
+        margin-bottom: 39px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+}
+.prepare-text-item-first {
+    margin-bottom: 35px;
+
+        @media screen and(min-width: 320px) and (max-width: 999px) {
+            margin-bottom: 47px;
+            &.mobile-first{
+                margin-bottom: 20px;
+            }
+        }
+}
+.prepare-text-item-second {
+margin-bottom: 45px;
+@media screen and(min-width: 768px) and (max-width: 999px) {
+    margin-bottom: 62px;
+    }
+
+    @media screen and(min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 17px;
+    }
+}
+
+.prepare-text-first {
+        font-size: 16px;
+        line-height: 1.76;
+        
+        color: var(--text-black-color);
+        @media screen and(min-width: 768px) and (max-width: 999px) {
+            font-size: 14px;
+            line-height: 1.76;
+            }
+        
+            @media screen and(min-width: 320px) and (max-width: 767px) {
+            font-size: 12px;
+            line-height: 1.62;
+            }
+}
+
+.prepare-text-second {
+        font-size: 14px;
+        line-height: 1.94;
+    
+        color: var(--text-gray-color);
+        @media screen and(min-width: 768px) and (max-width: 999px) {
+            font-size: 14px;
+            line-height: 1.76;
+            }
+        
+            @media screen and(min-width: 320px) and (max-width: 767px) {
+            font-size: 12px;
+            line-height: 1.62;
+            }
+}
+.prepare-button {
+    font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.3;
+        display: flex;
+        align-items: baseline;
+    
+        color: var(--focus-pinc-color);
+        padding: 10px 37px;
+    width: 176px;
+    height: 44px;
+    border-radius: 22px;
+    border: 1px solid #ECEBEB;
+    background-color: var(--focus-white-color);
+    transition: all var(--main-transition);
+    &:hover,
+    &:focus{
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+.prepare__icon{
+    width: 8px;
+    height: 8px;
+    margin-left: 9px;
+}
+
+.recepie {
+    margin-top: 39px;
+    @media screen and(min-width: 768px) {
+    display: flex;
+  }
+
+  @media screen and(min-width: 768px) and (max-width: 999px) {
+ margin-top: 66px;
+  }
+ @media screen and(min-width: 320px) and (max-width: 767px) {
+    margin-top: 39px;
+ }
+}
+.recepie-item:not(:last-child){
+    @media screen and(min-width: 320px) and (max-width: 767px) {
+        margin-bottom: 38px;
+        }
+                @media screen and(min-width: 768px) and (max-width: 999px) {
+                margin-right: 60px;
+                }
+}
+.recepie-img-first {
+    width: 33px;
+    height: 50px;
+}
+
+.recepie-img-second {
+    width: 50px;
+    height: 50px;
+}
+
+.recepie-img-third {
+    width: 44px;
+    height: 50px;
+}
+
+.recepie-count {
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 58px;
+        line-height: 1.14;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    
+        color: var(--focus-pinc-color);
+
+        margin-top: 40px;
+        @media screen and(min-width: 768px) and (max-width: 999px) {
+            font-size: 48px;
+            line-height: 1.15;
+
+            margin-top: 36px;
+            }
+        
+            @media screen and(min-width: 320px) and (max-width: 767px) {
+            font-size: 36px;
+            line-height: 1.14;
+
+            margin-top: 16px;
+            }
+}
+
+.recepie-text {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.76;
+        letter-spacing: 0.02em;
+    
+        color: var(--text-black-color);
+
+        margin-top: 15px;
+        @media screen and(min-width: 768px) and (max-width: 999px) {
+            font-size: 14px;
+            line-height: 1.74;
+            margin-top: 13px;
+            }
+        
+            @media screen and(min-width: 320px) and (max-width: 767px) {
+            font-size: 12px;
+            line-height: 1.70;
+            margin-top: 0;
+            }
+}

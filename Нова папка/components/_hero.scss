@@ -1,0 +1,109 @@
+
+.hero {
+    background-color: var(--hero-background-color);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    
+    height: 400px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-top: 118px;
+    // @media screen and (min-width: 320px) and (max-width: 479px) {
+    //         max-width: 320px;
+    //     }
+        @media screen and (max-width: 767px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/mhero_mobile1x-min.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                    url(../images/mhero_mobile2x-min.jpg);
+                    }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/thero1x-min.jpg);
+            @media (min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                    url(../images/thero2x-min.jpg);
+            }
+         }
+        @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url(../images/dhero1x-min.jpg);
+            padding-top: 200px;
+            height: 600px;
+            max-width: 1600px;
+            text-align: center;
+            @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+                url(../images/dhero2x-min.jpg);
+            }
+         }
+         &__text {
+            margin-top: 0;    
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+            color: var(--hero-text-color);
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            
+            @media screen and (max-width: 1199px) {
+                width: 360px;
+                font-size: 26px;
+                line-height: 1.62;                 
+             }
+             @media screen and (min-width: 1200px) {
+                width: 696px;
+                font-size: 44px;
+                line-height: 1.36; 
+                margin-left: auto;
+                margin-right: auto;                
+             }
+             @media screen and (min-width: 320px)and (max-width: 479px) {
+                display: block;   
+                width: 290px;
+                }
+         }
+
+    &__button{
+    cursor: pointer;
+    padding: 10px 32px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background-color: var(--focus-color);
+    color: var(--hero-text-color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background-color var(--main-transition),
+    box-shadow var(--main-transition); 
+
+        &:hover, &:focus{
+        background-color: var(--hero-button-fh-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+    }
+}

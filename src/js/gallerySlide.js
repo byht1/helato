@@ -5,31 +5,9 @@ var mouseY = 0;
 var mouseZ = 0;
 var addX = 0;
 
-// fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
-// no need to create my own :)
-var fps_counter = {
-  tick: function () {
-    // this has to clone the array every tick so that
-    // separate instances won't share state
-    this.times = this.times.concat(+new Date());
-    var seconds,
-      times = this.times;
-
-    if (times.length > this.span + 1) {
-      times.shift(); // ditch the oldest time
-      seconds = (times[times.length - 1] - times[0]) / 1000;
-      return Math.round(this.span / seconds);
-    } else return null;
-  },
-
-  times: [],
-  span: 20,
-};
-var counter = Object.create(fps_counter);
-
 $(document).ready(init);
 
-function init() {
+export function init() {
   w = $(window);
   container = $('#contentContainer');
   carousel = $('#carouselContainer');
@@ -64,7 +42,7 @@ function init() {
   ticker = setInterval(looper, 1000 / 60);
 }
 
-function animateIn($item, $block) {
+export function animateIn($item, $block) {
   var $nrX = 360 * getRandomInt(2);
   var $nrY = 360 * getRandomInt(2);
 
@@ -72,7 +50,7 @@ function animateIn($item, $block) {
   var $ny = -2000 + getRandomInt(4000);
   var $nz = -4000 + getRandomInt(4000);
 
-  var $s = 1.5 + getRandomInt(10) * 0.1;
+  var $s = 1.5 + getRandomInt(10) * 0.8;
   var $d = 1 - getRandomInt(8) * 0.1;
 
   TweenMax.set($item, { autoAlpha: 1, delay: $d });
@@ -100,15 +78,16 @@ function animateIn($item, $block) {
   });
 }
 
-function onMouseMove(event) {
-  mouseX = -(-(window.innerWidth * 0.5) + event.pageX) * 0.0025;
+// Оюертає
+export function onMouseMove(event) {
+  mouseX = -(-(window.innerWidth * 0.5) + event.pageX) * 0.0015;
   mouseY = -(-(window.innerHeight * 0.5) + event.pageY) * 0.01;
   mouseZ =
     -radius - (Math.abs(-(window.innerHeight * 0.5) + event.pageY) - 200);
 }
 
-// loops and sets the carousel 3d properties
-function looper() {
+// Автоматичний оберт
+export function looper() {
   addX += mouseX;
   TweenMax.to(carousel, 1, {
     rotationY: addX,
@@ -116,9 +95,8 @@ function looper() {
     ease: Quint.easeOut,
   });
   TweenMax.set(carousel, { z: mouseZ });
-  fps.text('Framerate: ' + counter.tick() + '/60 FPS');
 }
 
-function getRandomInt($n) {
+export function getRandomInt($n) {
   return Math.floor(Math.random() * $n + 1);
 }

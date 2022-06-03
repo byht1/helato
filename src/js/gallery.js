@@ -1,48 +1,59 @@
-// import gallerBig from '../templares/gallery.hbs';
+import { init } from './gallerySlide';
 
 const refs = {
+  slideGalledy: document.querySelector('.slaid-gallery'),
+  divGallery: document.querySelector('#contentContainer'),
   section: document.querySelector('#carouselContainer'),
+  list: document.querySelector('.gallery-list'),
   img: document.querySelectorAll('.gallety-list__photo'),
+  body: document.querySelector('body'),
 };
-// const z = refs.img[0].getAttribute('src')}
+
 let galleryHtml = [];
 
-for (let i = 0; i < refs.img.length; i++) {
-  //   console.log('🚀 ~ z', z);
-  //   const x = `<figure id="item${i + 1}" class="carouselItem trans3d">
-  //   <div class="carouselItemInner trans3d">
-  //   <img src="${
-  //     refs.img[i].dataset.img
-  //   }" class="gallety-list__photo-slid" loading="lazy"/>
-  //       </div>
-  //       </figure>`;
+refs.list.addEventListener('click', generHTML);
+refs.divGallery.addEventListener('click', end);
 
-  const x = `<figure id="item${i + 1}" class="carouselItem trans3d">
-  <div class="carouselItemInner trans3d">
-  <img
-              src="${refs.img[i].getAttribute('src')}"
-              alt="ice coffee"
-              class="gallety-list__photo"
-              loading="lazy"
-            />
-      </div>
-      </figure>`;
+function generHTML() {
+  galleryHtml = [];
+  refs.slideGalledy.classList.toggle('is-hidden');
+  refs.body.classList.add('modal-boby');
 
-  galleryHtml.push(x);
+  console.log('hi');
+
+  fotArr();
+
+  const section = document.querySelector('#carouselContainer');
+
+  section.insertAdjacentHTML('beforeend', galleryHtml.join(''));
+  init();
 }
 
-console.log(galleryHtml);
+function fotArr() {
+  for (let i = 0; i < refs.img.length; i++) {
+    const x = `<figure id="item${i + 1}" class="carouselItem trans3d">
+    <div class="carouselItemInner trans3d">
+      <img
+      src="${refs.img[i].getAttribute('src')}"
+      alt="ice coffee"
+      class="gallety-list__photo gallety-list__photo-big"
+      loading="lazy"/>
+    </div>
+  </figure>`;
+    galleryHtml.push(x);
+  }
 
-refs.section.insertAdjacentHTML('beforeend', galleryHtml.join(''));
+  refs.divGallery.insertAdjacentHTML(
+    'beforeend',
+    `<section id="carouselContainer" class="trans3d"></section>`
+  );
+}
 
-// const b = a.map((x, i) => {
-//   `<figure id="item${
-//     i + 1
-//   }" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
-//   <img
-//               src="${x.dataset}"
-//               class="gallety-list__photo-slid"
-//               loading="lazy"
-//             />
-//       </div>`;
-// });
+function end() {
+  if (event.target.nodeName === 'IMG') {
+    return;
+  }
+  refs.body.classList.remove('modal-boby');
+  refs.slideGalledy.classList.toggle('is-hidden');
+  refs.divGallery.innerHTML = '';
+}

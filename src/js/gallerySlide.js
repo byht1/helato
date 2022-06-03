@@ -1,11 +1,13 @@
 // set and cache variables
-var w, container, carousel, item, radius, itemLength, rY, ticker, fps;
-var mouseX = 0;
-var mouseY = 0;
-var mouseZ = 0;
-var addX = 0;
+let w, container, carousel, item, radius, itemLength, rY, ticker;
+let mouseX = 0;
+let mouseY = 0;
+let mouseZ = 0;
+let addX = 0;
 
-$(document).ready(init);
+export function two() {
+  $(document).ready(init);
+}
 
 export function init() {
   w = $(window);
@@ -13,19 +15,18 @@ export function init() {
   carousel = $('#carouselContainer');
   item = $('.carouselItem');
   itemLength = $('.carouselItem').length;
-  fps = $('#fps');
   rY = 360 / itemLength;
   radius = Math.round(250 / Math.tan(Math.PI / itemLength));
 
   // set container 3d props
-  TweenMax.set(container, { perspective: 600 });
-  TweenMax.set(carousel, { z: -radius });
+  TweenMax.set(container, { perspective: 5000 });
+  TweenMax.set(carousel, { z: -radius * 2 });
 
   // create carousel item props
 
   for (var i = 0; i < itemLength; i++) {
-    var $item = item.eq(i);
-    var $block = $item.find('.carouselItemInner');
+    let $item = item.eq(i);
+    let $block = $item.find('.carouselItemInner');
 
     //thanks @chrisgannon!
     TweenMax.set($item, {
@@ -43,15 +44,15 @@ export function init() {
 }
 
 export function animateIn($item, $block) {
-  var $nrX = 360 * getRandomInt(2);
-  var $nrY = 360 * getRandomInt(2);
+  let $nrX = 360 * getRandomInt(2);
+  let $nrY = 360 * getRandomInt(2);
 
-  var $nx = -2000 + getRandomInt(4000);
-  var $ny = -2000 + getRandomInt(4000);
-  var $nz = -4000 + getRandomInt(4000);
+  let $nx = -2000 + getRandomInt(4000);
+  let $ny = -2000 + getRandomInt(4000);
+  let $nz = -4000 + getRandomInt(4000);
 
-  var $s = 1.5 + getRandomInt(10) * 0.8;
-  var $d = 1 - getRandomInt(8) * 0.1;
+  let $s = 1.5 + getRandomInt(10) * 0.8;
+  let $d = 1 - getRandomInt(8) * 0.1;
 
   TweenMax.set($item, { autoAlpha: 1, delay: $d });
   TweenMax.set($block, {
@@ -81,7 +82,7 @@ export function animateIn($item, $block) {
 // Оюертає
 export function onMouseMove(event) {
   mouseX = -(-(window.innerWidth * 0.5) + event.pageX) * 0.0015;
-  mouseY = -(-(window.innerHeight * 0.5) + event.pageY) * 0.01;
+  mouseY = -(-(5000 * 0.5) + event.pageY) * 0.01;
   mouseZ =
     -radius - (Math.abs(-(window.innerHeight * 0.5) + event.pageY) - 200);
 }

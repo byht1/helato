@@ -18,6 +18,7 @@ function generHTML() {
   if (innerWidth < 768) {
     return;
   }
+
   galleryHtml = [];
   refs.slideGalledy.classList.toggle('is-hidden');
   refs.body.classList.add('hidden');
@@ -60,7 +61,25 @@ function end() {
   refs.divGallery.innerHTML = '';
 }
 
-// <figure id="item${i + 1 + refs.img.length}" class="carouselItem trans3d">
-//   <div class="carouselItemInner trans3d">
-//   </div>
-// </figure>
+// Так робить ненада потрібно придумати краще рішення
+function generHTMLTwo() {
+  if (innerWidth < 768) {
+    return;
+  }
+
+  galleryHtml = [];
+
+  fotArr();
+
+  const section = document.querySelector('#carouselContainer');
+
+  section.insertAdjacentHTML('beforeend', galleryHtml.join(''));
+  two();
+}
+
+setTimeout(() => {
+  generHTMLTwo();
+  setTimeout(() => {
+    refs.divGallery.innerHTML = '';
+  }, 1000);
+}, 100);

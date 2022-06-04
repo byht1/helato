@@ -41,12 +41,10 @@
 .products-list__element {
   position: relative;
   margin: 0 auto;
-  &:nth-child(2) .products-list-box,
-  &:nth-child(2) .back-box {
+  &:nth-child(2) .products-list-box {
     background-color: #f0d1a5;
   }
-  &:last-child .products-list-box,
-  &:last-child .back-box {
+  &:last-child .products-list-box {
     background-color: #c2e297;
   }
   &:not(:first-child) {
@@ -55,6 +53,8 @@
 }
 
 .products-list__photo {
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
 
   width: 249px;
@@ -78,8 +78,7 @@
   @include text('DM Sans', 700, 14px, 21px);
 }
 
-.button__arrow--size,
-.button__arrow--size-end {
+.button__arrow--size {
   margin: 0 auto;
   margin-top: 30px;
   @include flexCenter;
@@ -107,9 +106,13 @@
     transform: scale(0.9);
   }
 }
-// .button__arrow--size-end {
-//   transform: rotateY(180deg);
-// }
+
+.card__touch {
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
 .products-list__element {
   width: 280px;
   height: 598px;
@@ -124,12 +127,11 @@
 
 .front,
 .back {
+  z-index: 9;
   position: absolute;
   width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  transition: 1s;
+
+  transition: 500ms;
   backface-visibility: hidden;
 }
 
@@ -197,8 +199,7 @@
     margin-top: 0;
   }
 
-  .button__arrow--size,
-  .button__arrow--size-end {
+  .button__arrow--size {
     margin-top: 40px;
   }
 }

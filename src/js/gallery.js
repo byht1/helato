@@ -15,9 +15,9 @@ refs.button.addEventListener('click', generHTML);
 refs.divGallery.addEventListener('click', end);
 
 function generHTML() {
-  if (innerWidth < 768) {
-    return;
-  }
+  // if (innerWidth < 768) {
+  //   return;
+  // }
 
   galleryHtml = [];
   refs.slideGalledy.classList.toggle('is-hidden');

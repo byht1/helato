@@ -1,0 +1,215 @@
+.schedule {
+  background-color: #fff5f6;
+}
+
+.schedule-box {
+  padding: 0 30px;
+  padding-bottom: 113px;
+}
+
+.schedule-list {
+  position: relative;
+  top: -84px;
+  display: grid;
+  gap: 20px;
+}
+
+.schedule-list__element {
+  width: 220px;
+  margin: 0 auto;
+  padding: 43px 20px 43px 21px;
+  background-color: $wihte;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @include text('DM Sans', 500, 12px, 22px);
+
+  color: #000;
+}
+
+.schedule-list__header {
+  display: inline-block;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-radius: 4px;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: #f0d1a5;
+  color: $wihte;
+
+  &--color {
+    background-color: #c2e297;
+  }
+}
+
+.schedule-list__citi {
+  letter-spacing: 0.04em;
+  margin-top: 25px;
+}
+
+.schedule-list__text {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.schedule-week__day {
+  margin-top: 50px;
+}
+
+.schedule-week__time {
+  color: #ffa5ba;
+}
+
+.schedule-week__day-of {
+  margin-top: 10px;
+}
+
+.schedule-contact {
+  margin-top: 50px;
+}
+
+.schedule-contact__link {
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.schedule-list-button {
+  margin-top: 54px;
+  display: grid;
+  gap: 10px;
+}
+
+.schedule-list-button__element {
+  margin: 0 auto;
+}
+
+.schedule__button {
+  padding: 15px 17px;
+  border-radius: 22px;
+  @include text('DM Sans', 700, 16px, 21px);
+  background-color: $accentText;
+  color: $wihte;
+
+  @include transition();
+
+  & svg {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $wihte;
+    color: $accentText;
+  }
+
+  &--color {
+    background-color: $wihte;
+    color: $accentText;
+
+    &:hover,
+    &:focus {
+      background-color: $accentText;
+      color: $wihte;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .schedule-box {
+    padding: 0;
+    padding-bottom: 158px;
+  }
+
+  .schedule-list {
+    top: -78px;
+    display: flex;
+  }
+
+  .schedule-list__header {
+    @include text('DM Sans', 500, 16px, 30px);
+  }
+
+  .schedule-list__element {
+    width: 100%;
+    padding: 50px 32px 50px 32px;
+    @include text('DM Sans', 500, 14px, 23px);
+  }
+
+  .schedule-list__citi {
+    margin-top: 30px;
+  }
+
+  .schedule-week__day,
+  .schedule-contact {
+    margin-top: 60px;
+  }
+
+  .schedule-week__day-of {
+    margin-top: 15px;
+  }
+
+  .schedule-list-button {
+    margin-top: 81px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .schedule-list-button__element {
+    margin: 0;
+  }
+
+  .schedule__button {
+    padding: 15px 28px;
+
+    & svg {
+      margin-left: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .schedule {
+    background-image: image-set(
+      url('../images/schedule/web/schedule-fon-1280.webp') 1x,
+      url('../images/schedule/web/schedule-fon-2560.webp') 2x,
+      url('../images/schedule/schedule-fon-1280.png') 1x,
+      url('../images/schedule/schedule-fon-2560.png') 2x
+    );
+    background-repeat: no-repeat;
+  }
+
+  .schedule-box {
+    padding-bottom: 165px;
+  }
+
+  .schedule-list {
+    top: -102px;
+    gap: 31px;
+  }
+
+  .schedule-list__element {
+    width: 100%;
+    padding: 50px 32px 50px 32px;
+    @include text('DM Sans', 500, 16px, 30px);
+  }
+
+  .schedule-list__citi {
+    margin-top: 32px;
+  }
+
+  .schedule-week__day,
+  .schedule-contact {
+    margin-top: 64px;
+  }
+
+  .schedule-list-button {
+    margin-top: 86px;
+  }
+}

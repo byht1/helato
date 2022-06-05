@@ -70,6 +70,13 @@
   @include text('DM Sans', 700, 14px, 18px);
   color: #fff;
 
+  transition: color 250ms linear;
+
+  &:hover,
+  &:focus {
+    color: $accentText;
+  }
+
   &--color {
     color: $accentText;
   }
@@ -116,6 +123,9 @@
 }
 
 @media screen and(max-width: 999px) {
+  .header {
+    background-color: $fon;
+  }
   .nav-box {
     padding: 60px 21px;
   }
@@ -143,7 +153,7 @@
 
 @media screen and(min-width: 768px) {
   .header-box {
-    padding-top: 37px;
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 

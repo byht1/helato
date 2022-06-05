@@ -307,7 +307,7 @@
       width: 143px;
     }
     @media screen and(min-width: 320px) and (max-width: 767px) {
-      width: 171px;
+      max-width: 171px;
       left: 50px;
     }
   }
@@ -333,7 +333,7 @@
 .count {
   position: absolute;
   right: 20px;
-  top: 156px;
+  top: 74px;
 
   @media screen and(min-width: 768px) and (max-width: 999px) {
     top: 12px;

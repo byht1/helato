@@ -1,229 +1,48 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ice cream</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
-  </head>
-  <body>
-<!-- <section class="hero">
-<div class="conteiner hero-box">
-  <div class="hero-box-first"><div class="hero-text-cont">
-  <p class="hero-text">ice cream made with <span class="passion">passion</span></p>
-  <button class="hero-button first">Products</button>
-  <button class="hero-button second">How it's made?</button>
-</div>
-<div class="exelents">
-  <picture class="exelents__img">
-    <source srcset="
-    ./images/hero/millk-desctop-188-min.png 1x,
-    ./images/hero/millk-desctop-376-min.png 2x"
-    media="(min-width: 1000px)" />
-    <source srcset="
-     ./images/hero/millk-tablet-124-min.png 1x,
-    ./images/hero/millk-tablet-248-min.png 2x" 
-    media="(min-width: 768px)" />
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>Slick слайдер</title>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8">
+		<!-- Адаптив -->
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<!-- Оболочка для демонстрации -->
+		<div class="wrapper">
+			<!-- Контент -->
 
-    <img src="
-    ./images/hero/millk-desctop-188-min.png 1x,
-    ./images/hero/millk-desctop-376-min.png 2x"   alt="ice-cream" />
-</picture>
-<div class="exelent-cont"> 
-  <p class="exelents-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-  <a href="" class="exelents__link">
-    <svg class="exelents__icon">
-      <use href="./images/sprite.svg#arrow-right"></use>
-    </svg>
-  </a>
-</div>
- 
-</div>
-</div>
-<div class="hero-box-second">
- <div class="hero-ice-cream">
-  <picture class="hero-ice-cream__img">
-    <source srcset="
-    ./images/hero/ice-cream-desctop-fon-244-min.png 1x,
-    ./images/hero/ice-cream-desctop-fon-488-min.png 2x" 
-    media="(min-width: 1000px)" />
-    <source srcset="
-     ./images/hero/ice-cream-tablet-fon-143-min.png 1x,
-    ./images/hero/ice-cream-tablet-fon-286-min.png 2x" 
-    media="(min-width: 768px)" />
-    <source srcset="
-     ./images/hero/ice-cream-mobail-fon-171-min.png 1x,
-    ./images/hero/ice-cream-mobail-fon-342-min.png 2x" 
-    media="(min-width: 768px)" />
-
-    <img src="
-    ./images/hero/ice-cream-desctop-fon-244-min.png 1x,
-    ./images/hero/ice-cream-desctop-fon-488-min.png 2x"   alt="milk" />
-</picture>
-<picture class="hero-girl__img">
-  <source srcset="
-  ./images/hero/tasty-desctop-fon-293-min.png 1x,
-  ./images/hero/tasty-desctop-fon-586-min.png 2x" 
-  media="(min-width: 1000px)" />
-  <source srcset="
-   ./images/hero/tastea-tablet-fon-168-min.png 1x,
-  ./images/hero/tastea-tablet-fon-336-min.png 2x" 
-  media="(min-width: 768px)" />
-
-  <img src="
-  ./images/hero/tasty-desctop-fon-293-min.png 1x,
-  ./images/hero/tasty-desctop-fon-586-min.png 2x"   alt="tasty" />
-</picture>
-</div>
- 
-</div>
-<div class="count">
-  <ul class="ul">
-    <li class="count-item">
-      <p class="number">16</p>
-      <div class="circle-first"> </div>
-      <p class="kind">cafes</p>
-    </li>
-    <li class="count-item">
-      <p class="number">23</p>
-      <div class="circle-second"> </div>
-      <p class="kind">food trucks</p>
-    </li>
-  </ul>
-</div>
-</div>
-</section>
-  
-
-
-<section class="how-it-made">
-  <div class="conteiner">
-    <ul class="prepare-list">
-      <li class="prepare-item">
-          <p class="prepare-title-first">tradition and love </p>
-      </li>
-      <li class="prepare-item">
-          <p class="prepare-title-second">how it`s made?</p>
-      </li>
-    </ul>
-      <picture class="prepare__img">
-        <source srcset="
-        ./images/how-its-made/cow-desctop-516-min.png 1x,
-        ./images/how-its-made/millk-desctop-1032-min.png 2x"
-        media="(min-width: 1000px)" />
-        <source srcset="
-         ./images/how-its-made/cow-tablet-340-min.png 1x,
-        ./images/how-its-made/cow-tablet-680-min.png 2x" 
-        media="(min-width: 768px)" />
-        <source srcset="
-         ./images/how-its-made/cow-mobail-280-min.png 1x,
-        ./images/how-its-made/cow-mobail-560-min.png 2x" 
-        media="(min-width: 768px)" />
-        <img src="./images/how-its-made/millk-desctop-376-min.png"   alt="ice-cream" />
-    </picture>
-    <ul class="prepare-text-list">
-      <li class="prepare-text-item">
-        <p class="prepare-text-first">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
-      </li>
-      <li class="prepare-text-item">
-        <p class="prepare-text-second">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
-
-        </p>
-      </li>
-      <li class="prepare-text-item">
-        <p class="prepare-text-second position">Aliquam erat volutpat. Aenean accumsan.</p>
-      </li>
-      <li class="prepare-text-item">
-        <button type="button" class="prepare-button">Read more</button>
-      </li>
-    </ul>
-    <ul class="recepie">
-      <li class="recepie-item">
-        <svg class="recepie__icons" width="20" height="20">
-          <use href="./images/icons.svg#icon-twitter"></use>
-      </svg>
-      <p class="recepie-count"></p>
-      <p class="recepie-text"></p>
-      </li>
-      <li class="recepie-item">
-        <svg class="our-team-social-item__icons" width="20" height="20">
-          <use href="./images/icons.svg#icon-twitter"></use>
-      </svg>
-      <p class="recepie-count"></p>
-      <p class="recepie-text"></p>
-      </li>
-      <li class="recepie-item">
-        <svg class="our-team-social-item__icons" width="20" height="20">
-          <use href="./images/icons.svg#icon-twitter"></use>
-      </svg>
-      <p class="recepie-count"></p>
-      <p class="recepie-text"></p>
-      </li>
-    </ul>
-
-  </div>
-</section> -->
-
-<footer>
-<section class="footer">
-  <div class="conteiner footer-cont">
-    <ul class="footer-title-list">
-      <li class="footer-title-item">
-    <p class="title-first">homemade ice cream made </p>
-      </li>
-      <li class="footer-title-item">
-    <p class="title-second">with passion</p>
-      </li>
-    </ul>
-    
-    <div class="footer-contact">
-    <ul class="footer-social">
-      <li class="footer-social-item social-first">
-        <a href="" class="social-link">
-        <svg class="footer-social-icon">
-          <use href="./images/sprite.svg#icon-gidHab"></use>
-        </svg> 
-        </a>
-       
-      </li>
-      <li class="footer-social-item">
-        <a href="" class="social-link">
-        <svg class="footer-social-icon">
-          <use href="./images/sprite.svg#icon-telegram"></use>
-        </svg>
-        </a>
-        
-      </li>
-      <li class="footer-social-item">
-        <a href="" class="social-link">
-        <svg class="footer-social-icon">
-          <use href="./images/sprite.svg#icon-fb"></use>
-        </svg>
-        </a>
-
-      </li>
-    </ul>
-    <p class="footer-text">Feel free to contact<a href="tel:+610383766284" class="footer-number"> +61 (0) 383 766 284</a></p>
-    </div>
-  </div>
-
-</section>
-<section class="copyright">
-  <div class="conteiner">     	
-<p class="copyright-text">&#169 2019 - IceCream. All Rights Reserved.</p> 
-  </div>
-</section>
-
-</footer>
-  </body>
+			<div class="slider">
+				<div class="slider__item filter">
+					<img src="img/slides/big/02.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="img/slides/big/03.jpg" alt="">
+				</div>
+				<div class="slider__item filter">
+					<img src="img/slides/big/04.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="img/slides/big/05.jpg" alt="">
+				</div>
+			</div>
+			
+			<!-- Подключаем jQuery -->
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<!-- Подключаем слайдер Slick -->
+			<script src="js/slick.min.js"></script>
+			<!-- Подключаем файл скриптов -->
+			<script src="js/script.js"></script>
+		</div>
+	</body>
 </html>
+
+
+

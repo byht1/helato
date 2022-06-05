@@ -284,6 +284,8 @@
   @media screen and(min-width: 320px) and (max-width: 767px) {
     width: 346px;
     height: 344px;
+    right: -36px;
+    top: 0;
   }
 }
 
@@ -307,7 +309,7 @@
       width: 143px;
     }
     @media screen and(min-width: 320px) and (max-width: 767px) {
-      max-width: 171px;
+      width: 171px;
       left: 50px;
     }
   }

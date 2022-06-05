@@ -117,34 +117,6 @@
      overflow: hidden;
  }
 
-
-//  /* Стрелка */
-//  .slick-arrow {
-//  color: transparent;
-//  background-color: transparent;
-//  width: 20px;
-//  height: 20px;
- 
-//  }
-.slick-prev::before{
-    display: none;
-}
- /* Стрелка влево */
- .slick-arrow.slick-prev {
-    background-image: url(../images/people/arrow-left.svg);
-    background-size: 20px;
-    
-    // font-size: 0;
-    // line-height: 0;
-    // cursor: pointer;
-    // pointer-events: all;
- }
-
-//  /* Стрелка вправо */
-//  .slick-arrow.slick-next {}
-
-//  /* Стрелка не активная */
-//  .slick-arrow.slick-disabled {}
  .slick-dots li {
     background-image: url(../images/people/Ellipse.svg);
     background-size: 10px;

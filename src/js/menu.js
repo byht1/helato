@@ -8,13 +8,12 @@ const refs = {
   end: document.querySelector('.header__menu-end'),
   nav: document.querySelector('#nav'),
   hero: document.querySelector('#hero'),
-  about: document.querySelector('#recepie'),
-  cow: document.querySelector('#how-it-made'),
-  product: document.querySelector('#section-products'),
-  contact: document.querySelector('#schedule'),
-  link: document.querySelectorAll('.nav-list__link'),
+  // about: document.querySelector('#recepie'),
+  // cow: document.querySelector('#how-it-made'),
+  // product: document.querySelector('#section-products'),
+  // contact: document.querySelector('#schedule'),
+  // link: document.querySelectorAll('.nav-list__link'),
 };
-const height = window.outerHeight / 2;
 
 const arr = [];
 arr.push(refs.hero);
@@ -22,8 +21,6 @@ arr.push(refs.about);
 arr.push(refs.cow);
 arr.push(refs.product);
 arr.push(refs.contact);
-
-scrolEvent();
 
 refs.menu.addEventListener('click', () => {
   refs.nav.classList.toggle('nav--show');
@@ -47,20 +44,20 @@ window.addEventListener(
   }, 250)
 );
 
-window.addEventListener(
-  'scroll',
-  debounce(() => {
-    scrolEvent();
-  }, 100)
-);
+// window.addEventListener(
+//   'scroll',
+//   debounce(() => {
+//     scrolEvent();
+//   }, 100)
+// );
 
-function scrolEvent() {
-  for (let index = 0; index < 5; index++) {
-    let scrol = arr[index].getBoundingClientRect();
-    if (scrol.y <= height && scrol.y >= height * -1) {
-      refs.link[index].classList.add('nav-list__link--color');
-      return;
-    }
-    refs.link[index].classList.remove('nav-list__link--color');
-  }
-}
+// function scrolEvent() {
+//   for (let index = 0; index < 5; index++) {
+//     let scrol = arr[index].getBoundingClientRect();
+//     if (scrol.y <= height && scrol.y >= height * -1) {
+//       refs.link[index].classList.add('nav-list__link--color');
+//       return;
+//     }
+//     refs.link[index].classList.remove('nav-list__link--color');
+//   }
+// }

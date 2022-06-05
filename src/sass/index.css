@@ -93,14 +93,9 @@ button:focus {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1080px) {
+@media screen and (min-width: 768px) and (max-width: 1080) {
   .conteiner {
     width: 768px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .conteiner {
-    width: 100%;
   }
 }
 @media screen and (min-width: 1081px) {
@@ -195,6 +190,10 @@ button:focus {
   font-size: 14px;
   line-height: 1.2857142857;
   color: #fff;
+  transition: color 250ms linear;
+}
+.nav-list__link:hover, .nav-list__link:focus {
+  color: #d41443;
 }
 .nav-list__link--color {
   color: #d41443;
@@ -236,6 +235,10 @@ button:focus {
   }
 }
 @media screen and (max-width: 999px) {
+  .header {
+    background-color: #ffb8ca;
+  }
+
   .nav-box {
     padding: 60px 21px;
   }
@@ -260,7 +263,7 @@ button:focus {
 }
 @media screen and (min-width: 768px) {
   .header-box {
-    padding-top: 37px;
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 

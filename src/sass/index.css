@@ -1527,9 +1527,23 @@ button:focus {
     margin-top: 430px;
   }
 }
-.slider-section {
-  padding-top: 353px;
-  padding-bottom: 229px;
+@media screen and (min-width: 1000px) {
+  .slider-section {
+    padding-top: 353px;
+    padding-bottom: 229px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .slider-section {
+    padding-top: 279px;
+    padding-bottom: 197px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .slider-section {
+    padding-top: 154px;
+    padding-bottom: 170px;
+  }
 }
 
 .slider-person {
@@ -1654,6 +1668,10 @@ button:focus {
   background-size: 10px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.slick-dots li button:not(:last-child) {
+  margin-right: 18px;
 }
 
 .slick-dots li button::before {

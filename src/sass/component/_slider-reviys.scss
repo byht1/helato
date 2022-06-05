@@ -85,50 +85,26 @@
         color: #000000;
     @media screen and (min-width: 1000px) {
     font-size: 20px;
+    margin-bottom: 35px;
     }
     @media screen and (min-width: 768px) and (max-width: 999px){
     font-size: 16px;
+    margin-bottom: 35px;
     }
     @media screen and (max-width: 767px){
     font-size: 14px;
+    margin-bottom: 30px;
     }    
 }
 
-//  /* Слайдер */
  .slick-slider {
      position: relative;
  }
 
-//  /* Слайдер запущен */
-//  .slick-slider.slick-initialized {}
-
-//  /* Слайдер с точками */
-//  .slick-slider.slick-dotted {}
-
-//  /* Ограничивающая оболочка */
  .slick-list {
      overflow: hidden;
  }
 
-//  /* Лента слайдов */
-//  .slick-track {}
-
-//  /* Слайд */
-//  .slick-slide {}
-
-//  /* Слайд активный (показывается) */
-//  .slick-slide.slick-active {
-//      position: relative;
-//  }
-
-//  /* Слайд основной */
-//  .slick-slide.slick-current {}
-
-//  /* Слайд по центру */
-//  .slick-slide.slick-center {}
-
-//  /* Клонированный слайд */
-//  .slick-slide.slick-cloned {}
 
 //  /* Стрелка */
 //  .slick-arrow {
@@ -156,14 +132,19 @@
 
 //  /* Стрелка не активная */
 //  .slick-arrow.slick-disabled {}
-
-//  /* Точки (булиты) */
-//  .slick-dots {}
-
-//  .slick-dots li {}
-
+ .slick-dots li {
+    background-image: url(../images/people/Ellipse.svg);
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+.slick-dots li button::before{
+    display: none;
+}
 //  /* Активная точка */
-//  .slick-dots li.slick-active {}
-
-//  /* Элемент точки */
-//  .slick-dots li button {}
+ .slick-dots li.slick-active {
+    background-image: url(../images/people/home.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+ }

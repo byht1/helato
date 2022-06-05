@@ -2,6 +2,7 @@
   background-color: #ffb8ca;
 
   @media screen and(min-width: 1000px) {
+    padding-top: 87px;
     padding-bottom: 61px;
   }
 
@@ -17,7 +18,7 @@
 
 .hero-box {
   // dddd
-  
+
   @media screen and(min-width: 768px) and (max-width: 999px) {
     position: relative;
     display: flex;

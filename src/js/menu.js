@@ -1,4 +1,5 @@
 const throttle = require('lodash.throttle');
+const debounce = require('lodash.debounce');
 
 const refs = {
   header: document.querySelector('header'),
@@ -48,19 +49,18 @@ window.addEventListener(
 
 window.addEventListener(
   'scroll',
-  throttle(eve => {
-    scrolEvent(eve);
+  debounce(() => {
+    scrolEvent();
   }, 100)
 );
 
 function scrolEvent() {
-  for (let i = 0; i > 5; i++) {
-    const scrol = arr[i].getBoundingClientRect();
-    console.log('🚀 ~ scroll', scrol);
-
-    if (scrol >= height && scrol <= height * -2) {
-      refs.link[i].classList.add('nav-list__link--color');
+  for (let index = 0; index < 5; index++) {
+    let scrol = arr[index].getBoundingClientRect();
+    if (scrol.y <= height && scrol.y >= height * -1) {
+      refs.link[index].classList.add('nav-list__link--color');
+      return;
     }
-    refs.link[i].classList.remove('nav-list__link--color');
+    refs.link[index].classList.remove('nav-list__link--color');
   }
 }

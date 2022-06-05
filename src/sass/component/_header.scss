@@ -175,6 +175,9 @@
 }
 
 @media screen and(min-width: 1000px) {
+  .header__dutton-end {
+    display: none;
+  }
   .header {
     position: fixed;
     top: 0;

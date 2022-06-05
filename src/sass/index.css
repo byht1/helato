@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   width: 100%;
 }
@@ -101,7 +100,7 @@ button:focus {
 }
 @media screen and (max-width: 767px) {
   .conteiner {
-    max-width: 480px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1081px) {
@@ -635,6 +634,8 @@ button:focus {
   .hero-ice-cream {
     width: 346px;
     height: 344px;
+    right: -36px;
+    top: 0;
   }
 }
 
@@ -666,7 +667,7 @@ button:focus {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream__img img {
-    max-width: 171px;
+    width: 171px;
     left: 50px;
   }
 }
@@ -1667,16 +1668,6 @@ button:focus {
 
 .slick-list {
   overflow: hidden;
-}
-
-.slick-prev::before {
-  display: none;
-}
-
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-  background-image: url(../images/people/arrow-left.svg);
-  background-size: 20px;
 }
 
 .slick-dots li {

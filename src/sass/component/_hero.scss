@@ -281,11 +281,14 @@
     height: 322px;
   }
 
-  @media screen and(min-width: 320px) and (max-width: 767px) {
+  @media screen and(min-width: 320px) and (max-width: 579px) {
     width: 346px;
     height: 344px;
-    right: -36px;
-    top: 0;
+  }
+    @media screen and(min-width: 460px) and (max-width: 767px) {
+    width: 400px;
+    height: 400px;
+    right: -150px;
   }
 }
 
@@ -298,9 +301,12 @@
     bottom: -38px;
     left: 71px;
   }
-  @media screen and(min-width: 320px) and (max-width: 767px) {
+  @media screen and(min-width: 320px) and (max-width: 459px) {
     bottom: -73px;
     left: 81px;
+  }
+      @media screen and(min-width: 460px) and (max-width: 767px) {
+    bottom: -17px;
   }
 
   img {
@@ -308,10 +314,14 @@
     @media screen and(min-width: 768px) and (max-width: 999px) {
       width: 143px;
     }
-    @media screen and(min-width: 320px) and (max-width: 767px) {
+    @media screen and(min-width: 320px) and (max-width: 459px) {
       width: 171px;
       left: 50px;
     }
+    @media screen and(min-width: 460px) and (max-width: 767px) {
+      width: 171px;
+    left: 70px;
+  }
   }
 }
 
@@ -335,7 +345,7 @@
 .count {
   position: absolute;
   right: 20px;
-  top: 74px;
+  top: 71px;
 
   @media screen and(min-width: 768px) and (max-width: 999px) {
     top: 12px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
 }
@@ -93,9 +94,14 @@ button:focus {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1080) {
+@media screen and (min-width: 768px) and (max-width: 1080px) {
   .conteiner {
     width: 768px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .conteiner {
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 1081px) {
@@ -660,7 +666,7 @@ button:focus {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream__img img {
-    width: 171px;
+    max-width: 171px;
     left: 50px;
   }
 }
@@ -687,7 +693,7 @@ button:focus {
 .count {
   position: absolute;
   right: 20px;
-  top: 156px;
+  top: 74px;
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
   .count {
@@ -1661,6 +1667,16 @@ button:focus {
 
 .slick-list {
   overflow: hidden;
+}
+
+.slick-prev::before {
+  display: none;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  background-image: url(../images/people/arrow-left.svg);
+  background-size: 20px;
 }
 
 .slick-dots li {

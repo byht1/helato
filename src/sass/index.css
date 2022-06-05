@@ -88,14 +88,23 @@ button:focus {
 
 .conteiner {
   box-sizing: content-box;
-  min-width: 280px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1080) {
+@media screen and (max-width: 480px) {
   .conteiner {
-    width: 768px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .conteiner {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .conteiner {
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1081px) {
@@ -633,17 +642,11 @@ button:focus {
     height: 322px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 579px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream {
     width: 346px;
     height: 344px;
-  }
-}
-@media screen and (min-width: 460px) and (max-width: 767px) {
-  .hero-ice-cream {
-    width: 400px;
-    height: 400px;
-    right: -150px;
+    right: -62px;
   }
 }
 
@@ -659,15 +662,10 @@ button:focus {
     left: 71px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 459px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream__img {
     bottom: -73px;
     left: 81px;
-  }
-}
-@media screen and (min-width: 460px) and (max-width: 767px) {
-  .hero-ice-cream__img {
-    bottom: -17px;
   }
 }
 .hero-ice-cream__img img {
@@ -678,16 +676,10 @@ button:focus {
     width: 143px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 459px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream__img img {
     width: 171px;
     left: 50px;
-  }
-}
-@media screen and (min-width: 460px) and (max-width: 767px) {
-  .hero-ice-cream__img img {
-    width: 171px;
-    left: 70px;
   }
 }
 
@@ -713,7 +705,7 @@ button:focus {
 .count {
   position: absolute;
   right: 20px;
-  top: 71px;
+  top: 74px;
 }
 @media screen and (min-width: 768px) and (max-width: 999px) {
   .count {

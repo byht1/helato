@@ -88,23 +88,19 @@ button:focus {
 
 .conteiner {
   box-sizing: content-box;
+  min-width: 280px;
   padding: 0 20px;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .conteiner {
-    width: 100%;
+    width: 468px;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1080) {
   .conteiner {
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1080px) {
-  .conteiner {
-    max-width: 768px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1081px) {
@@ -679,7 +675,6 @@ button:focus {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .hero-ice-cream__img img {
     width: 171px;
-    left: 50px;
   }
 }
 

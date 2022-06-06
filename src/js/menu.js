@@ -35,6 +35,9 @@ refs.end.addEventListener('click', () => {
 window.addEventListener(
   'scroll',
   throttle(eve => {
+    if (innerWidth < 1080) {
+      return;
+    }
     const heroScrol = refs.hero.getBoundingClientRect();
     if (heroScrol.y > -60) {
       refs.header.removeAttribute('style');
